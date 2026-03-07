@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mohanad ElAdl – AI & Computer Science student at Egypt University of Informatics, specializing in machine learning, data analysis, and software development." />
+  <title>Mohanad ElAdl | AI Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Mohanad ElAdl – Home">
+        <span class="logo-text">M<span class="logo-accent">.</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false"
+        aria-controls="navMenu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#contact" class="nav-link nav-cta" role="menuitem">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO / HOME ===== -->
+    <section id="home" class="hero" aria-label="Hero section">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas id="particleCanvas" aria-hidden="true"></canvas>
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Egypt University of Informatics
+        </div>
+        <h1 class="hero-name">Mohanad ElAdl</h1>
+        <p class="hero-role">
+          <span class="role-prefix">AI</span>
+          <span class="typed-text" id="typedText" aria-label="AI Engineer"></span>
+          <span class="cursor-blink" aria-hidden="true">|</span>
+        </p>
+        <p class="hero-slogan">"Engineering Intelligence, Building the Future."</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            View Projects
+          </a>
+          <a href="resume.pdf" class="btn btn-secondary" download aria-label="Download Mohanad ElAdl's résumé PDF">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Résumé
+          </a>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+          <span>Scroll Down</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section about" aria-label="About Me">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title">About <span class="accent">Me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="avatar-wrapper">
+              <div class="avatar-ring" aria-hidden="true"></div>
+              <div class="avatar-ring avatar-ring--2" aria-hidden="true"></div>
+              <div class="avatar-core" aria-label="AI engineer avatar">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                  <circle cx="40" cy="28" r="16" fill="url(#avatarGrad)" />
+                  <ellipse cx="40" cy="62" rx="26" ry="14" fill="url(#avatarGrad)" />
+                  <defs>
+                    <linearGradient id="avatarGrad" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#38bdf8" />
+                      <stop offset="100%" stop-color="#a855f7" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="avatar-badge-chip">AI Engineer</div>
+            </div>
+            <div class="about-stats">
+              <div class="stat-card reveal">
+                <span class="stat-num">3+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-card reveal">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Skills</span>
+              </div>
+              <div class="stat-card reveal">
+                <span class="stat-num">EUI</span>
+                <span class="stat-label">University</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <p class="about-bio">
+              Senior Computer Science student at Egypt University of Informatics specializing in Artificial
+              Intelligence, with a strong foundation in programming, data analysis, and software development. I
+              demonstrate excellent analytical and problem-solving abilities, coupled with adaptability and attention to
+              detail. Committed to continuous learning and applying technical knowledge to develop innovative,
+              real-world solutions.
+            </p>
+            <div class="about-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Python</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">C# .NET</span>
+              <span class="tag">Algorithms</span>
+              <span class="tag">OOP</span>
+              <span class="tag">Git</span>
+            </div>
+            <a href="#contact" class="btn btn-primary about-cta">Let's Connect</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section projects" aria-label="Projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I've Built</span>
+          <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        </div>
+        <div class="projects-grid">
+
+          <!-- Project 1: Fire Escape Search Game -->
+          <article class="project-card reveal" aria-label="Project: Fire Escape Search Game">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Fire Escape Search Game</h3>
+            <p class="card-desc">An interactive pathfinding game built in Python using Pygame, visualizing A*, BFS, and
+              Greedy Best-First Search algorithms navigating a maze while escaping a dynamically spreading fire.
+              Features adaptive AI behavior, real-time environment updates, and performance benchmarking.</p>
+            <div class="card-tags" aria-label="Tech stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pygame</span>
+              <span class="tech-tag">A* / BFS</span>
+              <span class="tech-tag">AI Search</span>
+            </div>
+            <a href="https://github.com/MohanadEladl/Fire-Escape-Game" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline card-btn" role="button"
+              aria-label="View Fire Escape Search Game on GitHub (opens in new tab)">
+              View on GitHub
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Project 2: Egyptian Stock Market Analysis -->
+          <article class="project-card reveal" aria-label="Project: Egyptian Stock Market Analysis">
+            <div class="card-glow card-glow--purple" aria-hidden="true"></div>
+            <div class="card-icon card-icon--purple" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+                <polyline points="2 20 22 20" />
+              </svg>
+            </div>
+            <h3 class="card-title">Egyptian Stock Market Analysis</h3>
+            <p class="card-desc">Data analysis of 240 Egyptian companies across 13 sectors. Led data cleaning, outlier
+              removal, and stratified hypothesis testing using p-value analysis (α=0.05). Identified statistically
+              significant correlations between debt-to-equity ratios and RSI in 3 sectors. Team of 5.</p>
+            <div class="card-tags" aria-label="Tech stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Matplotlib</span>
+              <span class="tech-tag">Statistics</span>
+            </div>
+            <a href="https://github.com/MohanadEladl/Egyptian-Stock-Market-Analysis-" target="_blank"
+              rel="noopener noreferrer" class="btn btn-outline card-btn" role="button"
+              aria-label="View Egyptian Stock Market Analysis on GitHub (opens in new tab)">
+              View on GitHub
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Project 3: Article Management API -->
+          <article class="project-card reveal" aria-label="Project: Article Management API">
+            <div class="card-glow card-glow--cyan" aria-hidden="true"></div>
+            <div class="card-icon card-icon--cyan" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+            </div>
+            <h3 class="card-title">Article Management API</h3>
+            <p class="card-desc">Built during a software engineering internship at Darts Solutions (Canada). A backend
+              API using C# .NET with MVC architecture and Entity Framework. Features role-based authentication
+              (Admin/User), CRUD for articles with images, RESTful endpoints, Swagger documentation, and MySQL
+              integration.</p>
+            <div class="card-tags" aria-label="Tech stack">
+              <span class="tech-tag">C# .NET</span>
+              <span class="tech-tag">MVC</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Swagger</span>
+            </div>
+            <a href="#" class="btn btn-outline card-btn" role="button">
+              View Project
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section skills" aria-label="Skills and Certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I Know</span>
+          <h2 class="section-title">Skills &amp; <span class="accent">Certifications</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skills-bars reveal">
+            <h3 class="skills-subtitle">Core Proficiencies</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Python proficiency 92%">
+                <div class="skill-fill" data-width="92" style="--skill-fill-width: 92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Machine Learning</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Machine Learning proficiency 85%">
+                <div class="skill-fill" data-width="85" style="--skill-fill-width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Data Analysis &amp; Visualization</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Data Analysis proficiency 88%">
+                <div class="skill-fill" data-width="88" style="--skill-fill-width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">C# .NET &amp; Backend Dev</span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"
+                aria-label="C# .NET proficiency 78%">
+                <div class="skill-fill" data-width="78" style="--skill-fill-width: 78%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">SQL &amp; MySQL</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                aria-label="SQL proficiency 80%">
+                <div class="skill-fill" data-width="80" style="--skill-fill-width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Algorithms &amp; Data Structures</span>
+                <span class="skill-pct">82%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Algorithms proficiency 82%">
+                <div class="skill-fill" data-width="82" style="--skill-fill-width: 82%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-badges reveal">
+            <h3 class="skills-subtitle">Technology Badges</h3>
+            <div class="badges-grid">
+              <div class="badge-card" aria-label="Python">
+                <div class="badge-icon badge-icon--blue">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.37 0 6.27 2.88 6.27 2.88L6.28 5.88H12.1V6.75H3.9S0 6.3 0 12.06s3.38 5.55 3.38 5.55H5.4v-2.67s-.11-3.38 3.33-3.38h5.75s3.22.05 3.22-3.11V3.23S18.21 0 12 0zm-1.6 1.87c.58 0 1.05.47 1.05 1.05s-.47 1.05-1.05 1.05-1.05-.47-1.05-1.05.47-1.05 1.05-1.05z" />
+                    <path
+                      d="M12 24c6.63 0 5.73-2.88 5.73-2.88l-.01-3H12v-.87h8.1S24 17.7 24 11.94s-3.38-5.55-3.38-5.55H18.6v2.67s.11 3.38-3.33 3.38H9.52s-3.22-.05-3.22 3.11v5.22S5.79 24 12 24zm1.6-1.87c-.58 0-1.05-.47-1.05-1.05s.47-1.05 1.05-1.05 1.05.47 1.05 1.05-.47 1.05-1.05 1.05z" />
+                  </svg>
+                </div>
+                <span class="badge-label">Python</span>
+              </div>
+              <div class="badge-card" aria-label="scikit-learn">
+                <div class="badge-icon badge-icon--orange">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07" />
+                  </svg>
+                </div>
+                <span class="badge-label">scikit-learn</span>
+              </div>
+              <div class="badge-card" aria-label="Pandas &amp; NumPy">
+                <div class="badge-icon badge-icon--purple">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <line x1="3" y1="9" x2="21" y2="9" />
+                    <line x1="3" y1="15" x2="21" y2="15" />
+                    <line x1="9" y1="3" x2="9" y2="21" />
+                  </svg>
+                </div>
+                <span class="badge-label">Pandas / NumPy</span>
+              </div>
+              <div class="badge-card" aria-label="C# .NET">
+                <div class="badge-icon badge-icon--cyan">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M11.5 15.97l.41 2.44c-.26.14-.68.27-1.24.39-.57.13-1.24.2-2.01.2-2.21-.04-3.87-.7-4.98-1.99C2.56 15.77 2 14.16 2 12.21c.05-2.31.72-4.08 2-5.32C5.32 5.64 6.96 5 8.94 5c.75 0 1.4.07 1.94.19s.94.25 1.2.4l-.58 2.49-1.06-.31c-.4-.1-.86-.15-1.39-.15-1.16-.01-2.12.36-2.87 1.1-.76.74-1.15 1.84-1.18 3.32 0 1.32.35 2.36 1.04 3.09.69.73 1.65 1.1 2.88 1.12l1.4-.16 1.18-.42zM13.17 21V3.5h2.61v6.62l6.22-6.62V21l-6.22-6.63V21h-2.61z" />
+                  </svg>
+                </div>
+                <span class="badge-label">C# .NET</span>
+              </div>
+              <div class="badge-card" aria-label="SQL">
+                <div class="badge-icon badge-icon--yellow">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    aria-hidden="true">
+                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                  </svg>
+                </div>
+                <span class="badge-label">SQL / MySQL</span>
+              </div>
+              <div class="badge-card" aria-label="Git">
+                <div class="badge-icon badge-icon--blue">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.604-.404-.541-.534-.677-1.325-.404-1.993L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+                  </svg>
+                </div>
+                <span class="badge-label">Git</span>
+              </div>
+            </div>
+
+            <div class="certs-section reveal">
+              <h3 class="skills-subtitle">Experience &amp; Activities</h3>
+              <ul class="cert-list" aria-label="Experience and activities list">
+                <li class="cert-item">
+                  <span class="cert-icon" aria-hidden="true">💼</span>
+                  <div>
+                    <strong>Junior Software Engineer Intern</strong>
+                    <span class="cert-source">Darts Solutions, Canada (Remote) · Jun–Sep 2023</span>
+                  </div>
+                </li>
+                <li class="cert-item">
+                  <span class="cert-icon" aria-hidden="true">�</span>
+                  <div>
+                    <strong>BSc Computer Science — AI Major</strong>
+                    <span class="cert-source">Egypt University of Informatics · 2022–2026</span>
+                  </div>
+                </li>
+                <li class="cert-item">
+                  <span class="cert-icon" aria-hidden="true">🏅</span>
+                  <div>
+                    <strong>EUI Ambassador</strong>
+                    <span class="cert-source">Egypt University of Informatics</span>
+                  </div>
+                </li>
+                <li class="cert-item">
+                  <span class="cert-icon" aria-hidden="true">🤝</span>
+                  <div>
+                    <strong>Member — ASCC Charity Club</strong>
+                    <span class="cert-source">Community & Social Impact</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-intro">I'm open to new opportunities, collaborations, and interesting AI projects. Feel
+              free to reach out!</p>
+            <div class="contact-links">
+              <a href="mailto:mohanad.a.eladl@gmail.com" class="contact-link" aria-label="Send email to Mohanad ElAdl">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </span>
+                <span>mohanad.a.eladl@gmail.com</span>
+              </a>
+              <a href="https://linkedin.com/in/mohanad-eladl-0482632" target="_blank" rel="noopener noreferrer"
+                class="contact-link" aria-label="Visit Mohanad ElAdl's LinkedIn profile (opens in new tab)">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </span>
+                <span>linkedin.com/in/mohanad-eladl</span>
+              </a>
+              <a href="tel:+201206069005" class="contact-link" aria-label="Call Mohanad ElAdl">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </span>
+                <span>+20 12 0606 9005</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required
+                autocomplete="name" aria-required="true" />
+              <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required
+                autocomplete="email" aria-required="true" />
+              <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-input form-textarea"
+                placeholder="Tell me about your project or opportunity..." rows="5" required
+                aria-required="true"></textarea>
+              <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite" aria-atomic="true"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">M<span class="logo-accent">.</span></span>
+        <p class="footer-copy">© 2026 Mohanad ElAdl &mdash; All rights reserved.</p>
+        <div class="footer-socials" aria-label="Social media links">
+          <a href="mailto:mohanad.a.eladl@gmail.com" aria-label="Email Mohanad ElAdl">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/mohanad-eladl-0482632" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn profile (opens in new tab)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
