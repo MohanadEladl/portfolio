@@ -1,6 +1,6 @@
 /**
  * Portfolio – Mohanad ElAdl | script.js
- * Handles: navbar scroll, mobile menu, typed text, particle canvas,
+ * Handles: navbar scroll, mobile menu, typed text,
  *          scroll reveal, skill bar animation, contact form validation.
  */
 
@@ -10,9 +10,9 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
 /* ─── 1. NAVBAR ──────────────────────────────────────────── */
 (function initNavbar() {
-  const navbar   = $('.navbar');
-  const toggle   = $('#navToggle');
-  const menu     = $('#navMenu');
+  const navbar = $('.navbar');
+  const toggle = $('#navToggle');
+  const menu = $('#navMenu');
   const navLinks = $$('.nav-link');
 
   // Scroll → add .scrolled class
@@ -59,7 +59,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
 /* ─── 2. TYPED TEXT ──────────────────────────────────────── */
 (function initTyped() {
-  const el    = $('#typedText');
+  const el = $('#typedText');
   if (!el) return;
   const words = ['Engineer', 'Researcher', 'Innovator', 'Builder'];
   let wIdx = 0, cIdx = 0, deleting = false;
@@ -82,86 +82,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     setTimeout(type, deleting ? 60 : 100);
   }
   type();
-})();
-
-/* ─── 3. PARTICLE CANVAS ─────────────────────────────────── */
-(function initParticles() {
-  const canvas = $('#particleCanvas');
-  if (!canvas) return;
-  const ctx    = canvas.getContext('2d');
-  let W, H, particles = [], animId;
-
-  const COLORS = ['rgba(56,189,248,', 'rgba(168,85,247,', 'rgba(6,182,212,'];
-
-  class Particle {
-    constructor() { this.reset(true); }
-    reset(init) {
-      this.x  = Math.random() * W;
-      this.y  = init ? Math.random() * H : H + 10;
-      this.r  = Math.random() * 2 + 0.5;
-      this.vx = (Math.random() - 0.5) * 0.3;
-      this.vy = -(Math.random() * 0.4 + 0.1);
-      this.op = Math.random() * 0.6 + 0.2;
-      this.fade = Math.random() * 0.003 + 0.001;
-      this.col = COLORS[Math.floor(Math.random() * COLORS.length)];
-    }
-    update() {
-      this.x  += this.vx;
-      this.y  += this.vy;
-      this.op -= this.fade;
-      if (this.op <= 0 || this.y < -10) this.reset(false);
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fillStyle = this.col + this.op + ')';
-      ctx.fill();
-    }
-  }
-
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
-
-  function initPar() {
-    particles = Array.from({ length: 80 }, () => new Particle());
-  }
-
-  function loop() {
-    ctx.clearRect(0, 0, W, H);
-    // Draw connecting lines
-    particles.forEach((p, i) => {
-      particles.slice(i + 1).forEach(q => {
-        const dx = p.x - q.x, dy = p.y - q.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(q.x, q.y);
-          ctx.strokeStyle = `rgba(56,189,248,${0.08 * (1 - dist / 120)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
-        }
-      });
-      p.update();
-      p.draw();
-    });
-    animId = requestAnimationFrame(loop);
-  }
-
-  // Pause when hero not visible (performance)
-  const hero = document.getElementById('home');
-  const obs  = new IntersectionObserver(([e]) => {
-    if (e.isIntersecting) { animId = animId || requestAnimationFrame(loop); }
-    else { cancelAnimationFrame(animId); animId = null; }
-  }, { threshold: 0 });
-  obs.observe(hero);
-
-  window.addEventListener('resize', () => { resize(); initPar(); }, { passive: true });
-  resize();
-  initPar();
-  animId = requestAnimationFrame(loop);
 })();
 
 /* ─── 4. SCROLL REVEAL ───────────────────────────────────── */
@@ -200,13 +120,13 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
 /* ─── 6. CONTACT FORM ────────────────────────────────────── */
 (function initContactForm() {
-  const form    = $('#contactForm');
+  const form = $('#contactForm');
   if (!form) return;
-  const nameEl  = $('#name');
+  const nameEl = $('#name');
   const emailEl = $('#email');
-  const msgEl   = $('#message');
-  const submitBtn   = $('#submitBtn');
-  const successDiv  = $('#formSuccess');
+  const msgEl = $('#message');
+  const submitBtn = $('#submitBtn');
+  const successDiv = $('#formSuccess');
 
   function showError(inputEl, errorId, msg) {
     inputEl.classList.add('error');
@@ -273,7 +193,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 /* ─── 7. SMOOTH SCROLL for older browsers ─────────────────── */
 $$('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const id  = a.getAttribute('href').slice(1);
+    const id = a.getAttribute('href').slice(1);
     const target = document.getElementById(id);
     if (!target) return;
     e.preventDefault();
