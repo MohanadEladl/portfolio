@@ -1,39 +1,33 @@
-# CHANGES.md – Portfolio Redesign
+# CHANGES.md – Portfolio Redesign V3.0
 
-## Version 2.0 — March 2026
+This document lists all the major changes and upgrades implemented in the Version 3.0 redesign of the portfolio.
 
-### Visual Upgrades
-- **Floating orbs**: Electric blue, purple, and cyan animated light orbs in the hero section that float and pulse via CSS keyframe animations
-- **Cursor trail**: Canvas-based neon cursor streak that follows mouse movement with a gradient blue → purple → cyan trail (disabled on mobile/touch)
-- **Neon section headings**: `text-shadow` pulse animation applied to all section titles (`.neon-heading`)
-- **Glowing nav underline**: Navbar links have a gradient underline with glow on hover
-- **Project card border glow**: Animated conic-gradient neon border lights up card edges on hover
-- **Card hover overlay**: Hovering a project card reveals a translucent panel showing the tech stack prominently
-- **Skill badge pulse**: Each technology badge softly pulses with a blue/purple glow, staggered per badge
-- **Particle network**: Re-added connected-neuron particle animation in the hero (fewer particles on mobile)
+## 🚀 Visual Upgrades
+- **Mohanad ElAdl Wordmark Logo**: Replaced the "M." token with a full-name wordmark styled with a neon blue glow (`text-shadow`).
+- **Floating Orbs**: Added 4 semi-transparent glowing orbs (blue and purple) in the hero section that move slowly and pulse via CSS animations.
+- **Neuron Particle Network**: Implemented a responsive vanilla JS canvas background in the hero section showing connected dots (neurons) that reinforce the AI theme.
+- **Neon Cursor Trail**: Added a JavaScript-based neon streak (blue-to-purple) that follows the mouse cursor on desktop devices.
+- **Section Headings**: Applied a neon `text-shadow` glow to all `<h2>` section titles.
+- **Nav Underline**: Added an animated, glowing gradient underline that expands on hover for all nav links.
+- **Skill Badge Glow**: Each technology badge now features a soft, pulsing glow animation.
+- **Parallax Background**: The hero background now moves at a slower rate than the foreground during scrolling for depth.
 
-### New Animations & Interactions
-- **Loading screen** (1.5s): "M." logo glows and a progress bar fills before fading out to the homepage
-- **Hero name typewriter**: "Mohanad ElAdl" types character by character on load, then hands off to the role typer
-- **Role typed text**: AI Engineer / Researcher / Innovator / Builder cycles as before
-- **Parallax hero**: Hero CSS gradient background moves at 40% scroll speed using `requestAnimationFrame`
-- **Lift on hover**: Project cards lift 10px with a coloured shadow on hover (GPU-accelerated)
+## 📁 Project Card Overhaul
+- **Project Screenshots**: Integrated user-provided screenshots (`fire-escape.png`, `stock-analysis.png`, `article-api.png`) into each project card.
+- **Neon Border Frames**: Each project image is encased in a subtle neon-bordered frame.
+- **Hover Overlay**: Project images now feature a dark semi-transparent overlay on hover that displays the tech stack tags centered.
+- **Card Motion**: Project cards lift (`translateY(-8px)`) and gain an external neon glow on hover.
 
-### Content Improvements
-- **New slogan**: "Building Intelligent Systems. Solving Real Problems."
-- **Rewritten About Me**: Personal, first-person narrative replacing the CV-style summary
-- **6 new skill badges**: TensorFlow, NLP, Computer Vision, JavaScript, React.js, Pygame (total: 12 badges)
-- **Section order**: Home → Projects → About → Skills → Contact (Projects now first for recruiters)
+## 📝 Content & Fixes
+- **Hero Slogan**: Updated to "Building Intelligent Systems. Solving Real Problems."
+- **About Me**: Rewritten to be more personal and narrative-driven.
+- **Additional Skills**: Added TensorFlow, NLP, Computer Vision, JavaScript, React.js, and Pygame as glowing badge pills.
+- **Contact Info**: Completely removed the phone number for privacy.
+- **Article API Card**: Removed the "View Project" button entirely as requested.
+- **Resume Button**: Verified link to `resume.pdf` in the root directory.
 
-### Fixes
-- **Download Résumé button**: Points directly to `resume.pdf` with `download` attribute
-- **Article Management API card**: "View Project" replaced with greyed-out "Link Coming Soon" label — no dead `#` href
-- **Phone number removed**: Contact section and footer now show only email and LinkedIn
-
-### Performance & Accessibility
-- All animations use `transform` and `opacity` only (GPU-accelerated)
-- `prefers-reduced-motion` disables orbs, cursor trail, typewriters, and all keyframe animations
-- Touch/hover detection disables cursor trail on mobile
-- Particle count halved on screens < 768px
-- Proper `aria-hidden`, `aria-label`, and `role` attributes on all decorative new elements
-- Loading screen sets `aria-hidden="true"` and removes body scroll lock on dismiss
+## ⚙️ Performance & Accessibility
+- **GPU Acceleration**: All animations are restricted to `transform` and `opacity` properties for smoothness.
+- **Reduced Motion**: Added a `prefers-reduced-motion` media query to disable all intensive animations (orbs, particles, cursor trail, reveals) for accessibility.
+- **Responsive Animations**: Reduced particle count and disabled cursor trail on mobile screens (< 768px) to save battery and maintain performance.
+- **Semantic HTML**: Added proper ARIA labels and alt text to all new visual elements and images.

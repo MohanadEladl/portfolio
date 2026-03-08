@@ -19,7 +19,7 @@
 
   <!-- ===== LOADING SCREEN ===== -->
   <div id="loadingScreen" aria-hidden="true" role="presentation">
-    <div class="loader-logo">M<span class="loader-dot">.</span></div>
+    <div class="loader-wordmark">Mohanad ElAdl</div>
     <div class="loader-bar">
       <div class="loader-fill"></div>
     </div>
@@ -32,7 +32,7 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#home" class="nav-logo" aria-label="Mohanad ElAdl – Home">
-        <span class="logo-text">M<span class="logo-accent">.</span></span>
+        <span class="logo-wordmark">Mohanad ElAdl</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false"
         aria-controls="navMenu">
@@ -58,8 +58,10 @@
       <div class="orb orb--1" aria-hidden="true"></div>
       <div class="orb orb--2" aria-hidden="true"></div>
       <div class="orb orb--3" aria-hidden="true"></div>
-      <!-- Particle network canvas -->
+      <div class="orb orb--4" aria-hidden="true"></div>
+      <!-- AI neuron particle canvas -->
       <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
       <div class="hero-content reveal">
         <div class="hero-badge">
           <span class="badge-dot" aria-hidden="true"></span>
@@ -113,124 +115,109 @@
 
           <!-- Project 1: Fire Escape Search Game -->
           <article class="project-card reveal" aria-label="Project: Fire Escape Search Game">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="card-border-glow" aria-hidden="true"></div>
-            <div class="card-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path
-                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                </path>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                <line x1="12" y1="22.08" x2="12" y2="12"></line>
-              </svg>
-            </div>
-            <div class="card-overlay" aria-hidden="true">
-              <div class="overlay-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pygame</span>
-                <span class="tech-tag">A* / BFS</span>
-                <span class="tech-tag">AI Search</span>
+            <div class="card-image-wrap">
+              <img src="images/fire-escape.png" alt="Fire Escape Search Game maze interface" class="card-img"
+                loading="lazy">
+              <div class="card-image-overlay" aria-hidden="true">
+                <div class="overlay-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Pygame</span>
+                  <span class="tech-tag">AI Search</span>
+                </div>
               </div>
+              <div class="card-border-glow" aria-hidden="true"></div>
             </div>
-            <h3 class="card-title">Fire Escape Search Game</h3>
-            <p class="card-desc">An interactive pathfinding game built in Python using Pygame, visualizing A*, BFS, and
-              Greedy Best-First Search algorithms navigating a maze while escaping a dynamically spreading fire.
-              Features adaptive AI behavior, real-time environment updates, and performance benchmarking.</p>
-            <div class="card-tags" aria-label="Tech stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Pygame</span>
-              <span class="tech-tag">A* / BFS</span>
-              <span class="tech-tag">AI Search</span>
+            <div class="card-content">
+              <div class="card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="card-title">Fire Escape Search Game</h3>
+              <p class="card-desc">An interactive pathfinding game built in Python using Pygame, visualizing A*, BFS,
+                and
+                Greedy Best-First Search algorithms navigating a maze while escaping a dynamically spreading fire.</p>
+              <a href="https://github.com/MohanadEladl/Fire-Escape-Game" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline card-btn" role="button"
+                aria-label="View Fire Escape Search Game on GitHub (opens in new tab)">
+                View on GitHub
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
             </div>
-            <a href="https://github.com/MohanadEladl/Fire-Escape-Game" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline card-btn" role="button"
-              aria-label="View Fire Escape Search Game on GitHub (opens in new tab)">
-              View on GitHub
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </a>
           </article>
 
           <!-- Project 2: Egyptian Stock Market Analysis -->
           <article class="project-card reveal" aria-label="Project: Egyptian Stock Market Analysis">
-            <div class="card-glow card-glow--purple" aria-hidden="true"></div>
-            <div class="card-border-glow card-border-glow--purple" aria-hidden="true"></div>
-            <div class="card-icon card-icon--purple" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <line x1="18" y1="20" x2="18" y2="10" />
-                <line x1="12" y1="20" x2="12" y2="4" />
-                <line x1="6" y1="20" x2="6" y2="14" />
-                <polyline points="2 20 22 20" />
-              </svg>
-            </div>
-            <div class="card-overlay card-overlay--purple" aria-hidden="true">
-              <div class="overlay-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">Statistics</span>
+            <div class="card-image-wrap">
+              <img src="images/stock-analysis.png" alt="Egyptian Stock Market Analysis correlation chart"
+                class="card-img" loading="lazy">
+              <div class="card-image-overlay" aria-hidden="true">
+                <div class="overlay-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">Statistics</span>
+                </div>
               </div>
+              <div class="card-border-glow card-border-glow--purple" aria-hidden="true"></div>
             </div>
-            <h3 class="card-title">Egyptian Stock Market Analysis</h3>
-            <p class="card-desc">Data analysis of 240 Egyptian companies across 13 sectors. Led data cleaning, outlier
-              removal, and stratified hypothesis testing using p-value analysis (α=0.05). Identified statistically
-              significant correlations between debt-to-equity ratios and RSI in 3 sectors. Team of 5.</p>
-            <div class="card-tags" aria-label="Tech stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Pandas</span>
-              <span class="tech-tag">Matplotlib</span>
-              <span class="tech-tag">Statistics</span>
+            <div class="card-content">
+              <div class="card-icon card-icon--purple" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                  <polyline points="2 20 22 20" />
+                </svg>
+              </div>
+              <h3 class="card-title">Egyptian Stock Market Analysis</h3>
+              <p class="card-desc">Data analysis of 240 Egyptian companies across 13 sectors. Led cleaning, outlier
+                removal, and hypothesis testing using p-value analysis to find debt-to-equity correlations.</p>
+              <a href="https://github.com/MohanadEladl/Egyptian-Stock-Market-Analysis-" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline card-btn" role="button"
+                aria-label="View Egyptian Stock Market Analysis on GitHub (opens in new tab)">
+                View on GitHub
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
             </div>
-            <a href="https://github.com/MohanadEladl/Egyptian-Stock-Market-Analysis-" target="_blank"
-              rel="noopener noreferrer" class="btn btn-outline card-btn" role="button"
-              aria-label="View Egyptian Stock Market Analysis on GitHub (opens in new tab)">
-              View on GitHub
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </a>
           </article>
 
           <!-- Project 3: Article Management API -->
           <article class="project-card reveal" aria-label="Project: Article Management API">
-            <div class="card-glow card-glow--cyan" aria-hidden="true"></div>
-            <div class="card-border-glow card-border-glow--cyan" aria-hidden="true"></div>
-            <div class="card-icon card-icon--cyan" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="16" y1="13" x2="8" y2="13" />
-                <line x1="16" y1="17" x2="8" y2="17" />
-                <polyline points="10 9 9 9 8 9" />
-              </svg>
-            </div>
-            <div class="card-overlay card-overlay--cyan" aria-hidden="true">
-              <div class="overlay-tags">
-                <span class="tech-tag">C# .NET</span>
-                <span class="tech-tag">MVC</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Swagger</span>
+            <div class="card-image-wrap">
+              <img src="images/article-api.png" alt="Article Management API Swagger documentation" class="card-img"
+                loading="lazy">
+              <div class="card-image-overlay" aria-hidden="true">
+                <div class="overlay-tech">
+                  <span class="tech-tag">C# .NET</span>
+                  <span class="tech-tag">MVC</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
               </div>
+              <div class="card-border-glow card-border-glow--cyan" aria-hidden="true"></div>
             </div>
-            <h3 class="card-title">Article Management API</h3>
-            <p class="card-desc">Built during a software engineering internship at Darts Solutions (Canada). A backend
-              API using C# .NET with MVC architecture and Entity Framework. Features role-based authentication
-              (Admin/User), CRUD for articles with images, RESTful endpoints, Swagger documentation, and MySQL
-              integration.</p>
-            <div class="card-tags" aria-label="Tech stack">
-              <span class="tech-tag">C# .NET</span>
-              <span class="tech-tag">MVC</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Swagger</span>
+            <div class="card-content">
+              <div class="card-icon card-icon--cyan" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+              </div>
+              <h3 class="card-title">Article Management API</h3>
+              <p class="card-desc">A backend API using C# .NET with MVC architecture and Entity Framework. Features
+                role-based
+                authentication, RESTful endpoints, and Swagger documentation integration.</p>
+              <!-- View Project Button Removed per request -->
             </div>
-            <span class="btn btn-outline card-btn card-btn--disabled" aria-label="Project link coming soon">
-              Link Coming Soon
-            </span>
           </article>
 
         </div>
@@ -292,8 +279,6 @@
               <span class="tag">Data Visualization</span>
               <span class="tag">C# .NET</span>
               <span class="tag">Algorithms</span>
-              <span class="tag">OOP</span>
-              <span class="tag">Git</span>
             </div>
             <a href="#contact" class="btn btn-primary about-cta">Let's Connect</a>
           </div>
@@ -310,173 +295,76 @@
         </div>
         <div class="skills-grid skills-grid--single">
           <div class="skills-badges reveal">
-            <h3 class="skills-subtitle">Technology Badges</h3>
+            <h3 class="skills-subtitle">Technology & Tools</h3>
             <div class="badges-grid">
 
-              <div class="badge-card badge-pulse" aria-label="Python">
-                <div class="badge-icon badge-icon--blue">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M12 0C5.37 0 6.27 2.88 6.27 2.88L6.28 5.88H12.1V6.75H3.9S0 6.3 0 12.06s3.38 5.55 3.38 5.55H5.4v-2.67s-.11-3.38 3.33-3.38h5.75s3.22.05 3.22-3.11V3.23S18.21 0 12 0zm-1.6 1.87c.58 0 1.05.47 1.05 1.05s-.47 1.05-1.05 1.05-1.05-.47-1.05-1.05.47-1.05 1.05-1.05z" />
-                    <path
-                      d="M12 24c6.63 0 5.73-2.88 5.73-2.88l-.01-3H12v-.87h8.1S24 17.7 24 11.94s-3.38-5.55-3.38-5.55H18.6v2.67s.11 3.38-3.33 3.38H9.52s-3.22-.05-3.22 3.11v5.22S5.79 24 12 24zm1.6-1.87c-.58 0-1.05-.47-1.05-1.05s.47-1.05 1.05-1.05 1.05.47 1.05 1.05-.47 1.05-1.05 1.05z" />
-                  </svg>
-                </div>
-                <span class="badge-label">Python</span>
-              </div>
-
+              <!-- Skill Badges -->
               <div class="badge-card badge-pulse" aria-label="TensorFlow">
-                <div class="badge-icon badge-icon--orange">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564.015-5.31zM12.46 24V0l10.248 5.856.015 5.31-6.168-3.564v14.02L12.46 24z" />
-                  </svg>
-                </div>
+                <div class="badge-icon badge-icon--orange">TF</div>
                 <span class="badge-label">TensorFlow</span>
               </div>
-
               <div class="badge-card badge-pulse" aria-label="NLP">
-                <div class="badge-icon badge-icon--purple">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    aria-hidden="true">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                </div>
+                <div class="badge-icon badge-icon--purple">NLP</div>
                 <span class="badge-label">NLP</span>
               </div>
-
               <div class="badge-card badge-pulse" aria-label="Computer Vision">
-                <div class="badge-icon badge-icon--cyan">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    aria-hidden="true">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                </div>
+                <div class="badge-icon badge-icon--cyan">CV</div>
                 <span class="badge-label">Computer Vision</span>
               </div>
-
-              <div class="badge-card badge-pulse" aria-label="scikit-learn">
-                <div class="badge-icon badge-icon--orange">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
-                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07" />
-                  </svg>
-                </div>
-                <span class="badge-label">scikit-learn</span>
+              <div class="badge-card badge-pulse" aria-label="Python">
+                <div class="badge-icon badge-icon--blue">Py</div>
+                <span class="badge-label">Python</span>
               </div>
-
-              <div class="badge-card badge-pulse" aria-label="Pandas and NumPy">
-                <div class="badge-icon badge-icon--purple">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <line x1="3" y1="9" x2="21" y2="9" />
-                    <line x1="3" y1="15" x2="21" y2="15" />
-                    <line x1="9" y1="3" x2="9" y2="21" />
-                  </svg>
-                </div>
-                <span class="badge-label">Pandas / NumPy</span>
-              </div>
-
-              <div class="badge-card badge-pulse" aria-label="C# .NET">
-                <div class="badge-icon badge-icon--cyan">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M11.5 15.97l.41 2.44c-.26.14-.68.27-1.24.39-.57.13-1.24.2-2.01.2-2.21-.04-3.87-.7-4.98-1.99C2.56 15.77 2 14.16 2 12.21c.05-2.31.72-4.08 2-5.32C5.32 5.64 6.96 5 8.94 5c.75 0 1.4.07 1.94.19s.94.25 1.2.4l-.58 2.49-1.06-.31c-.4-.1-.86-.15-1.39-.15-1.16-.01-2.12.36-2.87 1.1-.76.74-1.15 1.84-1.18 3.32 0 1.32.35 2.36 1.04 3.09.69.73 1.65 1.1 2.88 1.12l1.4-.16 1.18-.42zM13.17 21V3.5h2.61v6.62l6.22-6.62V21l-6.22-6.63V21h-2.61z" />
-                  </svg>
-                </div>
-                <span class="badge-label">C# .NET</span>
-              </div>
-
-              <div class="badge-card badge-pulse" aria-label="SQL and MySQL">
-                <div class="badge-icon badge-icon--yellow">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    aria-hidden="true">
-                    <ellipse cx="12" cy="5" rx="9" ry="3" />
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                  </svg>
-                </div>
-                <span class="badge-label">SQL / MySQL</span>
-              </div>
-
               <div class="badge-card badge-pulse" aria-label="JavaScript">
-                <div class="badge-icon badge-icon--yellow">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
-                  </svg>
-                </div>
+                <div class="badge-icon badge-icon--yellow">JS</div>
                 <span class="badge-label">JavaScript</span>
               </div>
-
               <div class="badge-card badge-pulse" aria-label="React.js">
-                <div class="badge-icon badge-icon--blue">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="2.5" fill="currentColor" />
-                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(0)" />
-                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60)" />
-                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120)" />
-                  </svg>
-                </div>
+                <div class="badge-icon badge-icon--blue">Re</div>
                 <span class="badge-label">React.js</span>
               </div>
-
               <div class="badge-card badge-pulse" aria-label="Pygame">
-                <div class="badge-icon badge-icon--blue">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    aria-hidden="true">
-                    <polygon points="5 3 19 12 5 21 5 3" />
-                  </svg>
-                </div>
+                <div class="badge-icon badge-icon--blue">Pg</div>
                 <span class="badge-label">Pygame</span>
               </div>
-
+              <div class="badge-card badge-pulse" aria-label="C# .NET">
+                <div class="badge-icon badge-icon--purple">C#</div>
+                <span class="badge-label">C# .NET</span>
+              </div>
+              <div class="badge-card badge-pulse" aria-label="SQL">
+                <div class="badge-icon badge-icon--yellow">SQL</div>
+                <span class="badge-label">SQL</span>
+              </div>
               <div class="badge-card badge-pulse" aria-label="Git">
-                <div class="badge-icon badge-icon--blue">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.604-.404-.541-.534-.677-1.325-.404-1.993L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
-                  </svg>
-                </div>
+                <div class="badge-icon badge-icon--blue">Git</div>
                 <span class="badge-label">Git</span>
+              </div>
+              <div class="badge-card badge-pulse" aria-label="Pandas">
+                <div class="badge-icon badge-icon--orange">Pa</div>
+                <span class="badge-label">Pandas</span>
+              </div>
+              <div class="badge-card badge-pulse" aria-label="NumPy">
+                <div class="badge-icon badge-icon--cyan">Nu</div>
+                <span class="badge-label">NumPy</span>
               </div>
 
             </div>
 
             <div class="certs-section reveal">
               <h3 class="skills-subtitle">Experience &amp; Activities</h3>
-              <ul class="cert-list" aria-label="Experience and activities list">
+              <ul class="cert-list">
                 <li class="cert-item">
                   <span class="cert-icon" aria-hidden="true">💼</span>
                   <div>
                     <strong>Junior Software Engineer Intern</strong>
-                    <span class="cert-source">Darts Solutions, Canada (Remote) · Jun–Sep 2023</span>
+                    <span class="cert-source">Darts Solutions, Canada (Remote) · 2023</span>
                   </div>
                 </li>
                 <li class="cert-item">
                   <span class="cert-icon" aria-hidden="true">🎓</span>
                   <div>
                     <strong>BSc Computer Science — AI Major</strong>
-                    <span class="cert-source">Egypt University of Informatics · 2022–2026</span>
-                  </div>
-                </li>
-                <li class="cert-item">
-                  <span class="cert-icon" aria-hidden="true">🏅</span>
-                  <div>
-                    <strong>EUI Ambassador</strong>
-                    <span class="cert-source">Egypt University of Informatics</span>
-                  </div>
-                </li>
-                <li class="cert-item">
-                  <span class="cert-icon" aria-hidden="true">🤝</span>
-                  <div>
-                    <strong>Member — ASCC Charity Club</strong>
-                    <span class="cert-source">Community &amp; Social Impact</span>
+                    <span class="cert-source">Egypt University of Informatics · 2022–26</span>
                   </div>
                 </li>
               </ul>
@@ -495,10 +383,10 @@
         </div>
         <div class="contact-grid">
           <div class="contact-info reveal">
-            <p class="contact-intro">I'm open to new opportunities, collaborations, and interesting AI projects. Feel
-              free to reach out!</p>
+            <p class="contact-intro">I'm open to new opportunities and collaborations in AI and Software Engineering.
+            </p>
             <div class="contact-links">
-              <a href="mailto:mohanad.a.eladl@gmail.com" class="contact-link" aria-label="Send email to Mohanad ElAdl">
+              <a href="mailto:mohanad.a.eladl@gmail.com" class="contact-link" aria-label="Send email">
                 <span class="contact-link-icon" aria-hidden="true">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -508,11 +396,11 @@
                 <span>mohanad.a.eladl@gmail.com</span>
               </a>
               <a href="https://linkedin.com/in/mohanad-eladl-0482632" target="_blank" rel="noopener noreferrer"
-                class="contact-link" aria-label="Visit Mohanad ElAdl's LinkedIn profile (opens in new tab)">
+                class="contact-link" aria-label="LinkedIn Profile">
                 <span class="contact-link-icon" aria-hidden="true">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                     <path
-                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
                   </svg>
                 </span>
                 <span>linkedin.com/in/mohanad-eladl</span>
@@ -523,32 +411,24 @@
           <form class="contact-form reveal" id="contactForm" novalidate aria-label="Contact form">
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required
-                autocomplete="name" aria-required="true" />
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required />
               <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
             </div>
             <div class="form-group">
               <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required
-                autocomplete="email" aria-required="true" />
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
               <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
             </div>
             <div class="form-group">
               <label for="message" class="form-label">Message</label>
-              <textarea id="message" name="message" class="form-input form-textarea"
-                placeholder="Tell me about your project or opportunity..." rows="5" required
-                aria-required="true"></textarea>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="How can I help you?"
+                rows="5" required></textarea>
               <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
             </div>
             <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
               <span class="btn-text">Send Message</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <line x1="22" y1="2" x2="11" y2="13" />
-                <polygon points="22 2 15 22 11 13 2 9 22 2" />
-              </svg>
             </button>
-            <div class="form-success" id="formSuccess" role="status" aria-live="polite" aria-atomic="true"></div>
+            <div class="form-success" id="formSuccess"></div>
           </form>
         </div>
       </div>
@@ -559,23 +439,12 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">M<span class="logo-accent">.</span></span>
-        <p class="footer-copy">© 2026 Mohanad ElAdl &mdash; All rights reserved.</p>
-        <div class="footer-socials" aria-label="Social media links">
-          <a href="mailto:mohanad.a.eladl@gmail.com" aria-label="Email Mohanad ElAdl">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-          </a>
+        <span class="logo-wordmark">Mohanad ElAdl</span>
+        <p class="footer-copy">© 2026 Mohanad ElAdl. AI Engineering Student.</p>
+        <div class="footer-socials">
+          <a href="mailto:mohanad.a.eladl@gmail.com" aria-label="Email">📧</a>
           <a href="https://linkedin.com/in/mohanad-eladl-0482632" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn profile (opens in new tab)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-          </a>
+            aria-label="LinkedIn">🔗</a>
         </div>
       </div>
     </div>
