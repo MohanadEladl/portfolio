@@ -244,14 +244,11 @@ button {
   width: 100%;
 }
 
-.nav-cta {
-  background: var(--grad-primary);
-  color: #fff;
-  padding: 0.7rem 1.8rem;
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  box-shadow: var(--glow-blue);
-  transition: transform 0.3s, box-shadow 0.3s;
+.hero-btns {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
 }
 
 .nav-cta:hover {
@@ -855,11 +852,69 @@ button {
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
 }
 
+/* ─── 12. GLOBAL BUTTONS ────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--grad-primary);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--clr-blue);
+  border: 1px solid var(--clr-blue);
+}
+
+.btn-outline:hover {
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+}
+
+.btn-secondary {
+  background: rgba(168, 85, 247, 0.1);
+  color: var(--clr-purple);
+  border: 1px solid var(--clr-purple);
+}
+
+.btn-secondary:hover {
+  background: rgba(168, 85, 247, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(168, 85, 247, 0.2);
+}
+
 .form-submit {
   width: 100%;
   justify-content: center;
   padding: 1.2rem;
   font-size: 1.1rem;
+  background: var(--grad-primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--glow-blue);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .form-submit svg {
@@ -868,4 +923,12 @@ button {
 
 .form-submit:hover svg {
   transform: translate(3px, -3px);
+}
+
+.form-success {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--clr-blue);
+  min-height: 24px;
 }
