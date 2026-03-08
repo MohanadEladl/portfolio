@@ -98,18 +98,30 @@ function initCursorTrail() {
 
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Update point ages and remove old points
+    for (let i = 0; i < points.length; i++) {
+      points[i].age++;
+    }
+    points = points.filter(p => p.age < 30); // Points last ~0.5s at 60fps
+
     if (points.length > 1) {
-      ctx.beginPath();
-      ctx.moveTo(points[0].x, points[0].y);
       for (let i = 1; i < points.length; i++) {
         const point = points[i];
+        const prev = points[i - 1];
+
+        // Final opacity is a mix of its position in trail and its age
+        const ageOpacity = 1 - (point.age / 30);
+        const trailOpacity = i / points.length;
+        const opacity = ageOpacity * trailOpacity;
+
+        ctx.beginPath();
+        ctx.moveTo(prev.x, prev.y);
         ctx.lineTo(point.x, point.y);
-        ctx.strokeStyle = `rgba(0, 212, 255, ${i / points.length})`;
-        ctx.lineWidth = i * 0.8;
+        ctx.strokeStyle = `rgba(0, 212, 255, ${opacity})`;
+        ctx.lineWidth = i * 0.8 * ageOpacity;
         ctx.lineCap = 'round';
         ctx.stroke();
-        ctx.beginPath();
-        ctx.moveTo(point.x, point.y);
       }
     }
     requestAnimationFrame(animate);

@@ -240,47 +240,38 @@
           <span class="section-tag">Who I Am</span>
           <h2 class="section-title neon-heading">About <span class="accent">Me</span></h2>
         </div>
-        <div class="about-grid">
+        <div class="about-content">
           <div class="about-visual reveal">
-            <div class="avatar-wrapper">
-              <div class="avatar-ring" aria-hidden="true"></div>
-              <div class="avatar-ring avatar-ring--2" aria-hidden="true"></div>
-              <div class="avatar-core" aria-label="AI engineer avatar">
-                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-                  <circle cx="40" cy="28" r="16" fill="url(#avatarGrad)" />
-                  <ellipse cx="40" cy="62" rx="26" ry="14" fill="url(#avatarGrad)" />
-                  <defs>
-                    <linearGradient id="avatarGrad" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stop-color="#38bdf8" />
-                      <stop offset="100%" stop-color="#a855f7" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+            <div class="avatar-container">
+              <div class="avatar-glow"></div>
+              <div class="avatar-ring"></div>
+              <div class="avatar-image-wrap">
+                <img src="images/avatar.png" alt="Mohanad ElAdl - AI Engineer" class="avatar-img">
               </div>
-              <div class="avatar-badge-chip">AI Engineer</div>
-            </div>
-            <div class="about-stats">
-              <div class="stat-card reveal">
-                <span class="stat-num">3+</span>
-                <span class="stat-label">Projects</span>
-              </div>
-              <div class="stat-card reveal">
-                <span class="stat-num">1</span>
-                <span class="stat-label">Internship</span>
-              </div>
-              <div class="stat-card reveal">
-                <span class="stat-num">EUI</span>
-                <span class="stat-label">University</span>
-              </div>
+              <div class="avatar-badge">AI Engineer</div>
             </div>
           </div>
-          <div class="about-text reveal">
+          <div class="about-details reveal">
             <p class="about-bio">
               I'm Mohanad, an AI engineering student at Egypt University of Informatics with a passion for turning
               complex data into intelligent solutions. From visualizing pathfinding algorithms to analyzing financial
               markets, I love projects that sit at the intersection of math, code, and real-world impact. Currently
               looking for opportunities where I can grow and build things that matter.
             </p>
+            <div class="about-stats-row">
+              <div class="stat-item">
+                <span class="stat-num">3+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">1</span>
+                <span class="stat-label">Internship</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">EUI</span>
+                <span class="stat-label">University</span>
+              </div>
+            </div>
             <div class="about-tags">
               <span class="tag">Machine Learning</span>
               <span class="tag">Data Analysis</span>
@@ -390,52 +381,70 @@
           <span class="section-tag">Get In Touch</span>
           <h2 class="section-title neon-heading">Contact <span class="accent">Me</span></h2>
         </div>
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <p class="contact-intro">I'm open to new opportunities and collaborations in AI and Software Engineering.
-            </p>
-            <div class="contact-links">
-              <a href="mailto:mohanad.a.eladl@gmail.com" class="contact-link" aria-label="Send email">
-                <span class="contact-link-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+        <div class="contact-card reveal">
+          <div class="contact-info">
+            <h3 class="contact-subtitle">Let's talk about AI.</h3>
+            <p class="contact-text">I'm open to new opportunities and collaborations in AI and Software Engineering.</p>
+
+            <div class="info-items">
+              <a href="mailto:mohanad.a.eladl@gmail.com" class="info-link">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                </span>
+                </div>
                 <span>mohanad.a.eladl@gmail.com</span>
               </a>
               <a href="https://linkedin.com/in/mohanad-eladl-0482632" target="_blank" rel="noopener noreferrer"
-                class="contact-link" aria-label="LinkedIn Profile">
-                <span class="contact-link-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                class="info-link">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path
                       d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
                   </svg>
-                </span>
+                </div>
                 <span>linkedin.com/in/mohanad-eladl</span>
               </a>
             </div>
           </div>
 
-          <form class="contact-form reveal" id="contactForm" novalidate aria-label="Contact form">
-            <div class="form-group">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required />
-              <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
-              <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <div class="input-wrap">
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required />
+                  <div class="input-glow"></div>
+                </div>
+                <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <div class="input-wrap">
+                  <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com"
+                    required />
+                  <div class="input-glow"></div>
+                </div>
+                <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+              </div>
             </div>
             <div class="form-group">
               <label for="message" class="form-label">Message</label>
-              <textarea id="message" name="message" class="form-input form-textarea" placeholder="How can I help you?"
-                rows="5" required></textarea>
+              <div class="input-wrap">
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="How can I help you?"
+                  rows="5" required></textarea>
+                <div class="input-glow"></div>
+              </div>
               <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
             </div>
             <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
               <span class="btn-text">Send Message</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
             </button>
             <div class="form-success" id="formSuccess"></div>
           </form>
